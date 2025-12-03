@@ -114,10 +114,10 @@ Mathematically, each typical GraphSAGE layer computes:
 $N(v) = \text{SampleNeighbors}(v)$
 
 **2. Aggregation** (example: mean aggregator)
-$\mathbf{h}*{N(v)}^{(k)} = \frac{1}{|N(v)|} \sum*{u \in N(v)} \mathbf{h}_u^{(k-1)}$
+$\mathbf{h}{N(v)}^{(k)} = \frac{1}{|N(v)|} \sum{u \in N(v)} \mathbf{h}_u^{(k-1)}$
 
 **3. Node Update**
-$\mathbf{h}_v^{(k)} = \sigma\left( W^{(k)} \cdot [\mathbf{h}*v^{(k-1)} \Vert \mathbf{h}*{N(v)}^{(k)}] \right)$
+$\mathbf{h}_v^{(k)} = \sigma\left( W^{(k)} \cdot [\mathbf{h}v^{(k-1)} \Vert \mathbf{h}{N(v)}^{(k)}] \right)$
 
 where:
 
