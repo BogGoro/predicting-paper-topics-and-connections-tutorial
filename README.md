@@ -1,4 +1,4 @@
-# Tutorial: Node Classification and Link Prediction in Citation Networks using Graph Neural Networks
+# Node Classification and Link Prediction in Citation Networks using Graph Neural Networks
 
 *December 2025 · 15 min read · [Open in Colab](https://colab.research.google.com/github/BogGoro/predicting-paper-topics-and-connections-tutorial/blob/main/GraphML_Tutorial.ipynb)*
 
