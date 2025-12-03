@@ -111,19 +111,14 @@ class GraphSAGELayer(nn.Module):
 Mathematically, each typical GraphSAGE layer computes:
 
 **1. Neighbor Sampling**
-$
-N(v) = \text{SampleNeighbors}(v)
-$
+$N(v) = \text{SampleNeighbors}(v)$
 
 **2. Aggregation** (example: mean aggregator)
-$
-\mathbf{h}*{N(v)}^{(k)} = \frac{1}{|N(v)|} \sum*{u \in N(v)} \mathbf{h}_u^{(k-1)}
-$
+$\mathbf{h}*{N(v)}^{(k)} = \frac{1}{|N(v)|} \sum*{u \in N(v)} \mathbf{h}_u^{(k-1)}$
 
 **3. Node Update**
-$
-\mathbf{h}_v^{(k)} = \sigma\left( W^{(k)} \cdot [\mathbf{h}*v^{(k-1)} \Vert \mathbf{h}*{N(v)}^{(k)}] \right)
-$
+$\mathbf{h}_v^{(k)} = \sigma\left( W^{(k)} \cdot [\mathbf{h}*v^{(k-1)} \Vert \mathbf{h}*{N(v)}^{(k)}] \right)$
+
 where:
 
 * $( \mathbf{h}_v^{(k)} )$ — embedding of node (v) at layer (k)
@@ -257,7 +252,7 @@ Practical metric for real-world systems.
 
 - If we recommend top 100 citations, how many are correct?
 - Users only see top recommendations, not full ranking
-- $\text{Precision@100} = \frac{\#\text{correct in top 100}}{100}$
+- $\text{Precision@100} = \frac{\text{number of correct in top 100}}{100}$
 
 **Why multiple metrics?** AUC tells us about global ranking, AP about early ranking, and Precision@k about practical utility.
 
@@ -293,12 +288,6 @@ Key Insight: The training looks familiar, but *model(data.x, data.edge_index)* i
 
 
 ## t-SNE Visualization
-
-```python
-# Apply t-SNE to embeddings
-tsne = TSNE(n_components=2, perplexity=30)
-embeddings_2d = tsne.fit_transform(embeddings)
-```
 
 ![t-SNE Embeddings](images/tsne_node_embeddings.png?raw=true)
 
