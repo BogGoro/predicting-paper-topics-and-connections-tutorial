@@ -400,14 +400,7 @@ After 100 independent runs:
 
 # Conclusion
 
-Graph Neural Networks offer a paradigm shift for analyzing relational data. In citation networks:
-
-1. Structure matters: Citations provide information beyond paper content
-2. GraphSAGE works: Inductive learning handles real-world dynamics
-3. Multi-task needs care: Separate encoders prevent interference
-4. Evaluation is nuanced: Ranking metrics matter for link prediction
-
-The Cora dataset, while small, demonstrates fundamental principles that scale to massive citation networks.
+This comprehensive study demonstrates that different Graph Neural Network architectures excel at different tasks in citation network analysis. Through rigorous experimentation across 100 independent runs, we've uncovered nuanced performance patterns that challenge the notion of a universal "best" GNN architecture.
 
 # References
 
