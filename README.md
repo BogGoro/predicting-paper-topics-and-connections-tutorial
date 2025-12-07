@@ -260,6 +260,34 @@ Why Two Encoders Work Better:
 - **No gradient conflict**: Each encoder optimizes for its specific objective
 - **Specialized architectures**: Different depths and aggregation strategies per task
 
+## Node Classification Embeddings VS Link Prediction Embeddings
+
+### Node Classification
+
+Node Classification Objective:
+- Maximize distance between different classes
+- Embeddings optimized for: Class separability
+
+What node classification encoders learn:
+
+- Class-discriminative features that separate "Neural Networks" from "Genetic Algorithms"
+- Decision boundaries in the embedding space
+- Inter-class variance maximization
+- Feature combinations most predictive of labels
+
+### Link Prediction
+
+Link Prediction Objective:
+- Maximize similarity between connected nodes
+- Embeddings optimized for: Relationship modeling
+
+What link prediction encoders learn:
+
+- Similarity-preserving features that bring citing papers close together
+- Transitive relationship patterns (if A cites B and B cites C, A likely cites C)
+- Citation motif representations (common citation patterns)
+- Structural equivalence (papers serving similar roles in the citation network)
+
 # Link Prediction Challenges
 
 ## The Negative Sampling Problem
